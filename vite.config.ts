@@ -15,6 +15,7 @@ const config: UserConfigFn = () => {
     };
 
     return defineConfig({
+        base: '/app-time-now/',
         css: {
             preprocessorOptions: {
                 scss: {
