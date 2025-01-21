@@ -12,10 +12,11 @@ const config: UserConfigFn = () => {
         _CLIENT_PORT: '3000',
         _APP_NAME: 'TimeNow',
         _AUTHOR_NAME: 'LesnoyPudge',
-    };
+        _BASE: '/app-time-now/',
+    } as const;
 
     return defineConfig({
-        base: '/app-time-now/',
+        base: env._BASE,
         css: {
             preprocessorOptions: {
                 scss: {
@@ -77,12 +78,12 @@ const config: UserConfigFn = () => {
                     ].join(' '),
                     'icons': [
                         {
-                            'src': '/android-chrome-192x192.png',
+                            'src': `${env._BASE}android-chrome-192x192.png`,
                             'sizes': '192x192',
                             'type': 'image/png',
                         },
                         {
-                            'src': '/android-chrome-512x512.png',
+                            'src': `${env._BASE}android-chrome-512x512.png`,
                             'sizes': '512x512',
                             'type': 'image/png',
                         },
