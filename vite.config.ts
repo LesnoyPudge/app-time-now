@@ -35,7 +35,8 @@ const config: UserConfigFn = () => {
         build: {
             outDir: 'build',
             emptyOutDir: true,
-            assetsInlineLimit: 0,
+            // assetsInlineLimit: 0,
+            copyPublicDir: true,
             rollupOptions: {
                 treeshake: 'smallest',
             },
